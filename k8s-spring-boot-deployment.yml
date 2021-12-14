@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: jhooq-springboot
+  name: java-web-app
 spec:
   replicas: 2
   selector:
@@ -13,8 +13,8 @@ spec:
         app: jhooq-springboot
     spec:
       containers:
-        - name: springboot
-          image: rahulwagh17/jhooq-docker-demo:jhooq-docker-demo
+        - name: springboot-app
+          image: 526893880202.dkr.ecr.us-east-1.amazonaws.com/java-web-app:latest
           ports:
             - containerPort: 8080
           env:
